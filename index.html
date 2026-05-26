@@ -343,6 +343,133 @@
   .futuro-card:nth-child(2)::before { background: var(--morado); }
   .futuro-card:nth-child(3)::before { background: var(--verde); }
 
+  /* PRUEBA LA APP */
+  .prueba-bg {
+    background: linear-gradient(135deg, #1a2060 0%, #2d3a8c 40%, #4a3a8c 70%, #7b6cbf 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .prueba-bg::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+  .prueba-bg::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 300px; height: 300px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+  .prueba-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+  }
+  .prueba-inner .section-title { color: #fff; }
+  .prueba-card {
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.18);
+    border-radius: 28px;
+    padding: 48px 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .prueba-mascot {
+    width: 180px;
+    height: 180px;
+    background: rgba(255,255,255,0.10);
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .prueba-mascot img {
+    width: 145px;
+    height: 145px;
+    object-fit: contain;
+  }
+  .prueba-mascot-placeholder {
+    font-size: 72px;
+    line-height: 1;
+  }
+  .prueba-content h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+  .prueba-content h3 span { color: var(--amarillo); }
+  .prueba-aviso {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(245,200,66,0.15);
+    border: 1px solid rgba(245,200,66,0.4);
+    border-radius: 14px;
+    padding: 14px 18px;
+    margin-bottom: 28px;
+  }
+  .prueba-aviso-icon {
+    font-size: 20px;
+    color: var(--amarillo);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .prueba-aviso-text {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 600;
+    line-height: 1.6;
+  }
+  .prueba-aviso-text strong {
+    color: #fde68a;
+    font-weight: 800;
+  }
+  .prueba-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--amarillo);
+    color: #1a1f40;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    border: none;
+    cursor: pointer;
+  }
+  .prueba-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(245,200,66,0.35);
+  }
+  .prueba-btn i { font-size: 18px; }
+  .prueba-url {
+    display: block;
+    margin-top: 14px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
   /* CONCLUSIONES */
   .conclusiones-bg { background: linear-gradient(135deg, #2d3a8c 0%, #4a3a8c 50%, #7b6cbf 100%); padding: 64px 0; }
   .conclusiones-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
@@ -367,6 +494,9 @@
     .pasos-grid::after { display: none; }
     .container { padding: 0 20px; }
     .hero-inner { padding: 40px 20px; }
+    .prueba-card { grid-template-columns: 1fr; text-align: center; gap: 28px; }
+    .prueba-mascot { margin: 0 auto; }
+    .prueba-inner { padding: 0 20px; }
   }
 </style>
 </head>
@@ -777,31 +907,34 @@
   </div>
 </section>
 
-<!--Prueba MISHI -->
-<section class="section resultados-bg">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Prueba MISHI</h2>
+<div class="divider"></div>
+
+<!-- PRUEBA LA APP -->
+<section class="prueba-bg">
+  <div class="prueba-inner">
+    <div class="section-header" style="margin-bottom: 36px;">
+      <div class="section-num" style="background: var(--amarillo); color: #1a1f40;">11</div>
+      <h2 class="section-title" style="color: #fff;">¡Prueba MISHI ahora mismo!</h2>
     </div>
-    <div class="resultado-main">
-      <div class="resultado-items">
-        <div class="resultado-item" style="text-align: center;height: 200px;width: 230px;;"><a href="https://www.youtube.com" target="_blank"><img src="MISHI.png" alt="MISHI" height="200"></a></div>
-        <div class="resultado-item">La prueba de esta aplicacion aun no se encuentra en un servidor propio o de paga, puede llegar a tardar un timepo considerable</div>
+    <div class="prueba-card">
+      <div class="prueba-mascot">
+        <img src="MISHI.png" alt="Mascota MISHI">
+      </div>
+      <div class="prueba-content">
+        <h3>La app está <span>en línea</span> y lista para explorar</h3>
+        <div class="prueba-aviso">
+          <div class="prueba-aviso-icon"><i class="fas fa-clock"></i></div>
+          <div class="prueba-aviso-text">
+            <strong>Nota importante:</strong> La aplicación aún no se encuentra en un servidor propio o de paga, por lo que es normal que tarde unos segundos en cargar la primera vez. ¡Ten un poco de paciencia y enseguida estará lista!
+          </div>
+        </div>
+        <a href="https://mishi.onrender.com" target="_blank" rel="noopener noreferrer" class="prueba-btn">
+          <i class="fas fa-external-link-alt"></i>
+          Abrir MISHI
+        </a>
+        <span class="prueba-url">mishi.onrender.com</span>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- CONCLUSIONES -->
-<section class="conclusiones-bg">
-  <div class="conclusiones-inner">
-    <div class="section-header">
-      <div class="section-num" style="background: rgba(255,255,255,0.2); border: 1.5px solid rgba(255,255,255,0.4);">11</div>
-      <h2 class="section-title" style="color: #fff;">Conclusiones</h2>
-    </div>
-    <p class="conclusion-text">El desarrollo del proyecto MISHI permitió demostrar la importancia de contar con herramientas digitales sencillas y accesibles para apoyar a los negocios en el control de su inventario. A través del proceso de investigación y desarrollo del sistema, se confirmó que una aplicación web puede facilitar la organización de productos y mejorar la gestión interna de los establecimientos, contribuyendo a una toma de decisiones más ordenada y eficiente.</p>
-    <p class="conclusion-text">El carácter multiplataforma de MISHI representa una ventaja estratégica clave: al no requerir instalación ni equipo dedicado, cualquier negocio con acceso a internet — desde un celular hasta una computadora de escritorio — puede beneficiarse del sistema, eliminando las barreras de acceso tecnológico que enfrentan muchos pequeños negocios.</p>
-    <p class="conclusion-text">Esta investigación resalta la relevancia del desarrollo de software como apoyo a los pequeños negocios, demostrando que la tecnología puede adaptarse a distintos contextos y necesidades, aportando beneficios reales en la administración y el crecimiento de los negocios locales.</p>
   </div>
 </section>
 
